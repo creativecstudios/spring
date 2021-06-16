@@ -16,3 +16,21 @@
       <b> Bold </b>
       <p> This is bold tag "<b> </b>" </p>
    ```
+   We may also able to create our own tags we Extensible our own markup language
+   ** xml ** does this
+   
+   There is a case where I want to get data form server the way to achieve thing is using html
+   
+   But I don't want the design tags I want only the data
+   
+   XML achieve this
+   
+   ```xml
+      <?xml version="1.0" encoding="UTF-8"?>
+ - <note>
+       <to>Tove</to>
+       <from>Jani</from>
+       <heading>Reminder</heading>
+       <body>Don't forget me this weekend!</body>
+   </note>
+   ```
