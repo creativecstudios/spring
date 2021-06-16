@@ -1,5 +1,5 @@
 # Requirements for Spting
-## Maven Repository
+# Maven Repository
     * Maven is a repository which has all the required dependensy. 
     * It is like platform or like junction. 
     * where we able to get required dependensy  
@@ -9,7 +9,7 @@
     
    ### The main Theme concept of Maven is to provide dependency 
    ### Not only Maven will provide all of these stuffs there are some other stuffs like Gradle..
-##  xml
+#  xml
    xml is a ** Extensible MarkUp Language ** 
    Like in html there are inbuilt tags 
    ```html
@@ -34,3 +34,35 @@
        <body>Don't forget me this weekend!</body>
    </note>
    ```
+ #JSON
+ Java Script Object Notation
+   Json is similar to xml it has some intresting freatures 
+   However Json is considering as a standard format for transfering data in now a days
+   
+   But, why Json overrides the xml
+   
+      * In xml theres ia tag 
+      * Each element has starting and closing tag which is complex one right
+      
+      * But in Json there is no such formats. It makes much easier for us
+      ```json
+                  {"employees":[
+           { "firstName":"John", "lastName":"Doe" },
+           { "firstName":"Anna", "lastName":"Smith" },
+           { "firstName":"Peter", "lastName":"Jones" }
+         ]}
+      ```
+      ```xml
+               
+                  <employees>
+           <employee>
+             <firstName>John</firstName> <lastName>Doe</lastName>
+           </employee>
+           <employee>
+             <firstName>Anna</firstName> <lastName>Smith</lastName>
+           </employee>
+           <employee>
+             <firstName>Peter</firstName> <lastName>Jones</lastName>
+           </employee>
+         </employees>
+        ```
