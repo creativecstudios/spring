@@ -44,17 +44,19 @@
       * In xml theres ia tag 
       * Each element has starting and closing tag which is complex one right
       
-      * But in Json there is no such formats. It makes much easier for us
-    ``` json
-                  {"employees":[
+      * But in Json there is no such formats. It makes much easier for us.
+   
+   Json example
+ 
+   ```json
+           {"employees":[
            { "firstName":"John", "lastName":"Doe" },
            { "firstName":"Anna", "lastName":"Smith" },
            { "firstName":"Peter", "lastName":"Jones" }
          ]}
     ```
-    ``` xml
-               
-                  <employees>
+    ```xml
+        <employees>
            <employee>
              <firstName>John</firstName> <lastName>Doe</lastName>
            </employee>
@@ -64,5 +66,5 @@
            <employee>
              <firstName>Peter</firstName> <lastName>Jones</lastName>
            </employee>
-         </employees>
+       </employees>
     ```
