@@ -71,3 +71,5 @@
    ```
    ### Spring Initializer...
    
+   Go to spring Initializer https://start.spring.io/ Generate the dependencies take the review If Ok then start generating the zip file and open the same in IDE
+   
