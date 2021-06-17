@@ -1,12 +1,12 @@
 # Requirements for Spting
 ## Sring integrates with other farameworks like HIBERNATE, STRUTS...
    ### wHAT IS HIBERNATE
-    Hibernate is an open source object relational mapping tool for Java. 
+   Hibernate is an open source object relational mapping tool for Java. 
     It provides a framework for mapping an object-oriented domain model to a traditional relational database. ... 
     Mapping Java classes to database tables is accomplished through the configuration of an XML file or by using Java annotations.
    ### WHAT IS STRUTS
        
-      Struts is an open source framework that extends the Java Servlet API and employs a Model, View, Controller (MVC) architecture. 
+   Struts is an open source framework that extends the Java Servlet API and employs a Model, View, Controller (MVC) architecture. 
       It enables you to create maintainable, extensible, and flexible web applications based on standard technologies, 
       such as JSP pages, JavaBeans, resource bundles, and XML.
 
