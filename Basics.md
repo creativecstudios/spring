@@ -85,4 +85,22 @@
    When you ues eclipse or intelij ..Go to spring Initializer https://start.spring.io/ Generate the dependencies take the review If Ok then start generating the zip file and open the same in IDE
    
    Orelse simply Download Spring Tool Suite STS. https://spring.io/tools
+
+
+# SERVELETS
+
+## Servlets are Java classes which service HTTP requests and implement the javax
+Web application developers typically write servlets that extend javax. ... HttpServlet, an abstract class that implements the Servlet interface and is specially designed to handle HTTP requests.
+   when a client sends a request to server. server will respond the client as html page
    
+   Suppose If the server does not have such file to respond for client what to do ? If it is DYNAMIC REQUEST
+   
+   Java provides different features called servelets.Ok, what does servelets do ?
+   
+   If a file not present in server the request goes to Web Container (TOMCAT,GLASSFISH, etc...) these are called Web Container.
+   
+   The webcontainer has a WEB.XML file This file decides which serverlet to call further the servlet will provide something back in the form of either html or jsor whatever it may be.
+   
+   
+# MVC MODEL VIEW CONTROLLER
+
