@@ -12,6 +12,8 @@ public class Prem {
 	private int id;
 	private int age;
 	private String city;
+	@Autowired
+	private Laptop laptop;
 	public String getName() {
 		return name;
 	}
