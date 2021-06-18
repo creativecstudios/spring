@@ -44,9 +44,91 @@ public class Prem {
 	}
 }
 ```
-x-special/nautilus-clipboard
-copy
-file:///home/premg/Pictures/Screenshot%20from%202021-06-18%2008-27-47.png
+
 ![Screenshot from 2021-06-18 08-27-47](https://user-images.githubusercontent.com/63385985/122499769-1b894580-d00f-11eb-9f2a-9e1e6f2c98c2.png)
 
+Here in above image THe annotation @SpringBootApplication denotes that this is the starting point of my project 
 
+```java
+public static void main(String[] args) {
+		SpringApplication.run(MywebappApplication.class, args);
+		
+	}
+```
+THe springApplication.run(,) has two parameters.One is where to start (i.e) is my class name and Second is args.
+
+```java
+package com.ccs.mywebapp;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+@SpringBootApplication
+public class MywebappApplication {
+
+	public static void main(String[] args) {
+		ConfigurableApplicationContext context = SpringApplication.run(MywebappApplication.class, args);
+		
+		Prem obj = context.getBean(Prem.class);
+		
+		obj.printsomething();
+		
+	}
+
+}
+```
+![Screenshot from 2021-06-18 08-38-46](https://user-images.githubusercontent.com/63385985/122500565-aa4a9200-d010-11eb-90d7-cbc311c702a7.png)
+
+## Now I am going to create another class called laptop because prem need laptop
+Prem depends upon laptop to do practicing codes
+
+```java
+package com.ccs.mywebapp;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class Laptop {
+
+	private String comapnyname;
+	private String modelname;
+	private int price;
+	
+	public String getComapnyname() {
+		return comapnyname;
+	}
+	public void setComapnyname(String comapnyname) {
+		this.comapnyname = comapnyname;
+	}
+	public String getModelname() {
+		return modelname;
+	}
+	public void setModelname(String modelname) {
+		this.modelname = modelname;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	@Override
+	public String toString() {
+		return "Laptop [comapnyname =" + comapnyname + ", modelname=" + modelname + ", price=" + price + "]";
+	}
+	
+	public void laptopmethod() {
+		System.out.println("Hey Hi I am form Laptop class");
+	}
+	
+	
+}
+
+```
+![Screenshot from 2021-06-18 08-45-49](https://user-images.githubusercontent.com/63385985/122501090-a66b3f80-d011-11eb-9cb4-90486eca6e74.png)
+
+
+# There are two different class in spring 
+# singleton class and prototype class
+## @Controller refers to singleton class and @Scope(value="prototype") regers to prototype
