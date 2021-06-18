@@ -99,3 +99,17 @@ Spring boot reduces all those difficulties such as HttpServeletRequest,HttpServe
 		return mv;
 	}
 ```
+## Model view object
+
+```java
+@RequestMapping("home")
+	public ModelAndView show(Employee emp) {
+		
+	ModelAndView mv = new ModelAndView();	
+	mv.addObject("obj",emp);
+	mv.setViewName("Home");
+		return mv;
+	}
+	
+```
+![Screenshot 2021-06-18 213955](https://user-images.githubusercontent.com/63385985/122589713-3e067780-d07e-11eb-945f-b557422aa8dd.png)
