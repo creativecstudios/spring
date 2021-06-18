@@ -132,6 +132,32 @@ public class Laptop {
 # There are two different class in spring 
 # singleton class and prototype class
 ## @Controller refers to singleton class and @Scope(value="prototype") refers to prototype
+### Singleton class
+* create static instance of the class
+* make the constructor as private
+* create a static method which return the instance of the class.
+
+```java
+
+class abc{
+
+	public static void main(String args[]){
+		Singleton obj = Singleton.getinstance();
+	}
+class Singleton{
+	static Singleton obj = new Singleton();
+	
+	private Singleton(){
+	
+	}
+	
+	public static Singleton getinstance(){
+		return obj;
+	}
+	
+}
+}
+```
 
 @AutoWired which is used to connect between prem and laptop class
  now laptop class inject its dependency to prem class
