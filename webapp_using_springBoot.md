@@ -1,6 +1,7 @@
 ## To open a webapp in browser we want a @Controller
 
 To make a class as a Controller use @Controller at the top of the class
+
 ![Screenshot 2021-06-18 175310](https://user-images.githubusercontent.com/63385985/122560343-215a4780-d05e-11eb-9c98-c845a05b75fb.png)
 
 ### To create a view we want .jsp file
