@@ -131,4 +131,8 @@ public class Laptop {
 
 # There are two different class in spring 
 # singleton class and prototype class
-## @Controller refers to singleton class and @Scope(value="prototype") regers to prototype
+## @Controller refers to singleton class and @Scope(value="prototype") refers to prototype
+
+@AutoWired which is used to connect between prem and laptop class
+ now laptop class inject its dependency to prem class
+ 
