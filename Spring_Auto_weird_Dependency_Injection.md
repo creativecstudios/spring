@@ -162,3 +162,8 @@ class Singleton{
 @AutoWired which is used to connect between prem and laptop class
  now laptop class inject its dependency to prem class
  
+ * Also calling by name of the class
+ * Using Qualifier
+ ![Screenshot from 2021-06-18 11-32-53](https://user-images.githubusercontent.com/63385985/122514201-2e107880-d029-11eb-8589-8bd43a0b4ff0.png)
+![Screenshot from 2021-06-18 11-33-15](https://user-images.githubusercontent.com/63385985/122514209-2fda3c00-d029-11eb-99ff-58b05f26dd68.png)
+
