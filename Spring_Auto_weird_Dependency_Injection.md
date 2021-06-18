@@ -5,15 +5,17 @@
 
 ```java
     package com.ccs.mywebapp;
-
+@Component
 public class Prem {
 
 	private String name;
 	private int id;
 	private int age;
 	private String city;
+	
 	@Autowired
 	private Laptop laptop;
+	
 	public String getName() {
 		return name;
 	}
@@ -58,7 +60,7 @@ public static void main(String[] args) {
 		
 	}
 ```
-THe springApplication.run(,) has two parameters.One is where to start (i.e) is my class name and Second is args.
+The springApplication.run(parameter1 ,parameter2) has two parameters.One is where to start the flow of the projet (i.e my main class name) and Second is args.
 
 ```java
 package com.ccs.mywebapp;
@@ -91,7 +93,7 @@ package com.ccs.mywebapp;
 
 import org.springframework.stereotype.Controller;
 
-@Controller
+@Component
 public class Laptop {
 
 	private String comapnyname;
@@ -135,7 +137,8 @@ public class Laptop {
 # There are two different class in spring 
 # singleton class and prototype class
 ## @Controller refers to singleton class and @Scope(value="prototype") refers to prototype
-### Singleton class
+
+### Singleton class in Java
 * create static instance of the class
 * make the constructor as private
 * create a static method which return the instance of the class.
