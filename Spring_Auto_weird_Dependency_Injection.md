@@ -41,6 +41,7 @@ public class Prem {
 	
 	public void printsomething() {
 		System.out.println("Hi I am from Prem Class");
+		laptop.laptopmethod();
 	}
 }
 ```
