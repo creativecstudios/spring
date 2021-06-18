@@ -43,14 +43,13 @@ public class Mycontroller {
 		return "Home";
 	}
 
-// when client asks request to about or home or... page the spring dosen't no where to call the about or home or... page 
-// To indicate that we use @Requestmappint befor the method
+// when client asks request to 'about' or 'home' or... page we should call the particular page by executing a method. But spring doesn't know how to accept the request // and where the method is. So we use @RequestMapping("home") above that method.
 
 	@RequestMapping("about")
 	public String about() {
   
   // usually spring allows us to loose coupling by reducing the call like about.jsp 
-  // we just return about (i.e) the name of the file dont need to reperesent the extension such as .jsp,.html,etc.
+  // we just return 'about' (i.e the name of the file)  dont need to reperesent the extension such as .jsp,.html,etc.
   // Fot that we use application.properties mentioned below
   
 		return "About";
@@ -64,3 +63,39 @@ spring.mvc.view.suffix=.jsp
 ```
 
 ![Screenshot 2021-06-18 182043](https://user-images.githubusercontent.com/63385985/122563609-04277800-d062-11eb-8c21-184dfbe0393c.png)
+
+# Accepting Client data
+
+```java
+@RequestMapping("home")
+public String hello(HttpServeletRequest req){
+	HttpSession session = req.getSession();
+	String name = req.getParameter("name");
+	session.setAttribute("name",name);
+	//exactly don't know but, session acts as temperory storage. it holds the data during particular interval of time.
+	System.out.println("name");
+	return "Hello";
+}
+
+```
+### JSP file which prints the data
+```html
+<body>
+	<p> Hi my name is ${name}</p>
+</body>
+${} --> represents jstl or el (expression language)
+```
+# ModelAndView
+Spring boot reduces all those difficulties such as HttpServeletRequest,HttpServeletResponse.... by replacing ModelAndView
+
+```java
+	@RequestMapping("home")
+	public ModelAndView hello(@RequestParam("name") String myName){
+		
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("name",myName);
+		mv.setViewName("home");
+		
+		return mv;
+	}
+```
