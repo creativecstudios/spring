@@ -171,4 +171,3 @@ class Singleton{
 ![Screenshot from 2021-06-18 11-33-15](https://user-images.githubusercontent.com/63385985/122514209-2fda3c00-d029-11eb-99ff-58b05f26dd68.png)
 
 
-
