@@ -62,3 +62,5 @@ public class Mycontroller {
 spring.mvc.view.prefix=/pages/
 spring.mvc.view.suffix=.jsp
 ```
+
+![Screenshot 2021-06-18 182043](https://user-images.githubusercontent.com/63385985/122563609-04277800-d062-11eb-8c21-184dfbe0393c.png)
