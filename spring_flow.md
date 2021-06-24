@@ -31,3 +31,10 @@ public Department savedepartment(@RequestBody Department department)
 ### Here the Request body is the request from the rest client as a JSON object which will convert it into our Department object that is our entity object.
 
 #### To save the department, we have to call Service layer to pass this data and from that service layer we will do business logic and after doing logic we will call repository layer to save the particular data here.
+
+```java
+spring.datasource.url=jdbc:mysql://localhost:3306/book
+spring.datasource.username=root
+spring.datasource.password=root
+spring.jpa.hibernate.use-new-id-generator-mappings= false
+```
