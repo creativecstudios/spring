@@ -134,7 +134,7 @@ public class Laptop {
 ![Screenshot from 2021-06-18 08-45-49](https://user-images.githubusercontent.com/63385985/122501090-a66b3f80-d011-11eb-9cb4-90486eca6e74.png)
 
 
-# There are two different class in spring 
+# There are two different scope in spring bean 
 # singleton class and prototype class
 ## @Controller refers to singleton class and @Scope(value="prototype") refers to prototype
 
