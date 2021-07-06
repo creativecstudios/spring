@@ -1,0 +1,133 @@
+@import url('http://fonts.cdnfonts.com/css/cantarell');
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Cantarell', sans-serif;
+}
+
+.sidenav {
+    position: fixed;
+    width: 300px;
+    background-color: rgb(196, 86, 119);
+    height: 100vh;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#myDIV {
+    margin-top: 30px;
+}
+
+#myDIV a {
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    padding-left: 20px;
+    color: white;
+}
+
+.active,
+.btn a:hover {
+    color: white;
+    background-color: #3c1053ff;
+    border-right: 7px solid #df6589ff;
+    font-size: 17px;
+    letter-spacing: 3px;
+    transition: 250ms ease-in-out;
+}
+
+#myDIV a:hover {
+    color: white;
+    background-color: #3c1053ff;
+    border-right: 7px solid #df6589ff;
+    font-size: 17px;
+    letter-spacing: 3px;
+    transition: 250ms ease-in-out;
+}
+
+.maincontent {
+    margin-left: 300px;
+    padding: 10px;
+}
+
+.heading {
+    margin-top: 20px;
+    justify-content: space-between;
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.stockdetails {
+    padding: 20px;
+    height: 320px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 7px;
+}
+
+.gridcontent {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.rows {
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr;
+}
+
+.rows input {
+    width: 60%;
+    height: 100%;
+    padding-left: 10px;
+}
+
+.label {
+    margin-top: 5px;
+}
+
+.gridbutton {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#submit {
+    color: white;
+    width: 50%;
+    border: none;
+    background-color: rgb(55, 194, 55);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#reset {
+    color: white;
+    width: 50%;
+    border: none;
+    background-color: #4e9af1;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+
+/* viewhtml */
+
+.tablecontent {
+    margin-top: 20px;
+    padding: 20px;
+    overflow-y: auto;
+    height: 200px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    padding: 15px;
+    border: 1px solid black;
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- Slim version breaks AJAX Calls-->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- alert -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- javascript -->
+    <script src="ajaxcall.js"></script>
+
+    <link rel="stylesheet" href="ajaxcall.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="sidenav">
+        <div id="myDIV">
+            <a href="#" class="btn">Home</a>
+            <a href="ajaxcalladd.html" class="btn">Add stocks</a>
+            <a href="ajaxcallview.html" class="btn active">View stocks</a>
+        </div>
+    </div>
+    <div class="maincontent">
+        <div class="heeading">
+            <h1 style="color: rgb(175, 49, 87);">View stocks</h1>
+            <hr style="background-color: rgb(175, 49, 87); height: 2px;">
+        </div>
+        <div class="tablecontent">
+            <table id="stocktable">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Category</th>
+                        <th>Stock name</th>
+                        <th>Quantity</th>
+                        <th>Base price</th>
+                        <th>Profit</th>
+                        <th>Expiry date</th>
+                    </tr>
+                </thead>
+
+
+            </table>
+
+        </div>
+    </div>
+    <tr id="template">
+        <td>
+            <div class="id">this is id</div>
+        </td>
+        <td>
+            <div class="category"></div>
+        </td>
+        <td>
+            <div class="stockname"></div>
+        </td>
+        <td>
+            <div class="quantity"></div>
+        </td>
+        <td>
+            <div class="baseprice"></div>
+        </td>
+        <td>
+            <div class="profit"></div>
+        </td>
+        <td>
+            <div class="expirydate"></div>
+        </td>
+    </tr>
+    <script>
+        $(document).ready(function() {
+            var stockfromdb = {
+                "id": 1,
+                "category": "food",
+                "stockname": "cerals",
+                "quantity": 1,
+                "baseprice": 1,
+                "profit": 1,
+                "expirydate": "2021 - 09 - 19"
+            };
+            console.log(stockfromdb);
+
+
+            $.ajax({
+                url: "http://localhost:8080/inventory",
+                type: "GET",
+                async: true,
+                success: function(data) {
+                    stockfromdb = data
+                    console.log(stockfromdb);
+                }
+            });
+            var stocktable = " ";
+            $.each(stockfromdb, function(key, stock) {
+
+                stocktable += "<tr>";
+                stocktable += "<td>" + stock.id + "</td>";
+                stocktable += "<td>" + stock.category + "</td>";
+                stocktable += "<td>" + stock.stockname + "</td>";
+                stocktable += "<td>" + stock.quantity + "</td>";
+                stocktable += "<td>" + stock.baseprice + "</td>";
+                stocktable += "<td>" + stock.profit + "</td>";
+                stocktable += "<td>" + stock.expirydate + "</td>";
+                stocktable += "</tr>";
+
+                $("#stocktable").append(stocktable);
+            });
+
+        });
+    </script>
+</body>
+
+</html>
+
+<!-- $.each(stockfromdb, function(index, stock) {
+    var template = document.getElementById("template");
+    console.log(template);
+    template.content.querySelector(".id").innerHTML = stock.id;
+    template.content.querySelector(".category").innerHTML = stock.category;
+    template.content.querySelector(".stockname").innerHTML = stock.stockname;
+    template.content.querySelector(".quantity").innerHTML = stock.quantity;
+    template.content.querySelector(".baseprice").innerHTML = stock.baseprice;
+    template.content.querySelector(".profit").innerHTML = stock.profit;
+    template.content.querySelector(".expirydate").innerHTML = stock.expirydate;
+
+    var clone = document.importNode(template.content, true);
+    $("#printsection").append(clone);
+}) -->
+
+<!-- for (var temp = 0; temp < stockfromdb.length; temp++) {
+    $("#printsection").append(
+        "<tr>" +
+        "<td>" + stockfromdb[temp].id + "</td>" +
+        "<td>" + stockfromdb[temp].category + "</td>" +
+        "<td>" + stockfromdb[temp].stockname + "</td>" +
+        "<td>" + stockfromdb[temp].quantity + "</td>" +
+        "<td>" + stockfromdb[temp].baseprice + "</td>" +
+        "<td>" + stockfromdb[temp].profit + "</td>" +
+        "<td>" + stockfromdb[temp].expirydate + "</td>" +
+        "</tr>"
+
+    );
+} -->

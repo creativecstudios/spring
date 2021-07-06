@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- Slim version breaks AJAX Calls-->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- alert -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- javascript -->
+    <script src="ajaxcall.js"></script>
+
+    <link rel="stylesheet" href="ajaxcall.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <div class="sidenav">
+        <div id="myDIV">
+            <a href="#" class="btn">Home</a>
+            <a href="ajaxcalladd.html" class="btn active">Add stocks</a>
+            <a href="ajaxcallview.html" class="btn">View stocks</a>
+        </div>
+    </div>
+    <div class="maincontent">
+        <div class="heading">
+            <h1 style="color: rgb(175, 49, 87);">Add stocks</h1>
+            <p style="color: rgb(175, 49, 87);">*These are mandatory fields</p>
+        </div>
+        <div class="stockdetails">
+            <h2>Stock details</h2>
+            <hr style="background-color: rgb(175, 49, 87); height: 1px;">
+            <form autocomplete="off">
+                <div class="gridcontent">
+                    <div class="rows">
+                        <label for="">Category*</label>
+                        <input type="text" id="category" placeholder="category">
+                        <label for="" id="clbl" class="label" style="visibility: hidden; color: red;">category is required</label>
+
+                    </div>
+                    <div class="rows">
+                        <label for="">Stock name*</label>
+                        <input type="text" id="stockname" placeholder="stock name">
+                        <label for="" id="slbl" class="label" style="visibility: hidden; color: red;">stockname is required</label>
+
+                    </div>
+                    <div class="rows">
+                        <label for="">Quantity*</label>
+                        <input type="number" id="quantity" placeholder="quantity" min="1">
+                        <label for="" id="qlbl" class="label" style="visibility: hidden; color: red;">quantity is required</label>
+
+                    </div>
+                    <div class="rows">
+                        <label for="">Base price*</label>
+                        <input type="number" id="baseprice" placeholder="base price" min="1">
+                        <label for="" id="blbl" class="label" style="visibility: hidden; color: red;">baseprice is required</label>
+
+                    </div>
+                    <div class="rows">
+                        <label for="">Profit*</label>
+                        <input type="number" id="profit" placeholder="profit" min="0">
+                        <label for="" id="plbl" class="label" style="visibility: hidden; color: red;">profit is required</label>
+
+                    </div>
+                    <div class="rows">
+                        <label for="">Expiry date*</label>
+                        <input type="date" id="expirydate">
+                        <label for="" id="elbl" class="label" style="visibility: hidden; color: red;">expirydate is required</label>
+
+                    </div>
+                    <!-- <button onclick="submit(event)">formnutton</button> -->
+                </div>
+            </form>
+            <div class="gridbutton">
+                <button onclick="submit(event)" id="submit">Submit</button>
+                <button onclick="reset()" id="reset">Reset</button>
+            </div>
+        </div>
+    </div>
+    <!-- <script>
+        // Add active class to the current button (highlight it)
+        var header = document.getElementById("myDIV");
+        var btns = header.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script> -->
+</body>
+
+</html>
