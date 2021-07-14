@@ -23,7 +23,7 @@
 
 7 Reset Button will perform reset operation.
 
-## View Stocks
+## View Stocks page
 
 8 To view stock table I used $.getJSON method. The table has two buttons in its last column namely Edit and Delete.
 
