@@ -13,9 +13,9 @@
  
 2 When submit button clicked it Does basic form validation.
 
-3 Along with it will restricts duplicate stockname if the user enter existing stock name. It will display an alert message that stock name already exists. 
+3 Along with it will restricts duplicate stockname if the user enter existing stock name. It will display an alert message that "stock name already exists". 
 
-4 I used Response Entity for exception handling in the backend. This response will be hited in the UI when the user inuts excisting stockname.
+4 I used Response Entity for exception handling in the backend. This response will be hited in the UI when the user inputs excisting stockname.
 
 5 Also after clicking submit button the input fields get reseted for next new input.
 
