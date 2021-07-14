@@ -13,13 +13,15 @@
  
 When submit button clicked it Does basic form validation.
 
-Along with it will restricts duplicate stockname if user enter existing stock name it will display an alert message that stock name already exists. 
+Along with it will restricts duplicate stockname if the user enter existing stock name. It will display an alert message that stock name already exists. 
+
+I used Response Entity for exception handling in the backend. This response will be hited in the UI when the user inuts excisting stockname.
 
 Also after clicking submit button the input fields get reseted for next new input.
 
 To post the entered data I used ajax Post method with submit button.
 
-I used Response Entity for exception handling in the backend. This response will be hited when user enter excisting stockname.
+
 
 Reset Button will perform reset operation.
 
