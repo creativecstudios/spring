@@ -1,7 +1,7 @@
 # Stock Management
 
 ## Add Stocks page
-  There are 6 input fields
+  1 There are 6 input fields
   * Category
   * Stock Name
   * Quantity
@@ -11,27 +11,25 @@
     and two buttons 
   * Submit and Reset.
  
-When submit button clicked it Does basic form validation.
+2 When submit button clicked it Does basic form validation.
 
-Along with it will restricts duplicate stockname if the user enter existing stock name. It will display an alert message that stock name already exists. 
+3 Along with it will restricts duplicate stockname if the user enter existing stock name. It will display an alert message that stock name already exists. 
 
-I used Response Entity for exception handling in the backend. This response will be hited in the UI when the user inuts excisting stockname.
+4 I used Response Entity for exception handling in the backend. This response will be hited in the UI when the user inuts excisting stockname.
 
-Also after clicking submit button the input fields get reseted for next new input.
+5 Also after clicking submit button the input fields get reseted for next new input.
 
-To post the entered data I used ajax Post method with submit button.
+6 To post the entered data I used ajax Post method with submit button.
 
-
-
-Reset Button will perform reset operation.
+7 Reset Button will perform reset operation.
 
 ## View Stocks
 
-To view stock table I used $.getJSON method. The table has two buttons in its last column namely Edit and Delete.
+8 To view stock table I used $.getJSON method. The table has two buttons in its last column namely Edit and Delete.
 
-I used JPA repository in Springboot for all these operation and also done all these using JDBC template but not with UI.
+9 I used JPA repository in Springboot for all these operation and also done all these using JDBC template but not with UI.
 
-I used @Qualifier("service1 or service2") anotation to map the service class when more than one service class exists.
+10 I used @Qualifier("service1 or service2") anotation to map the service class when more than one service class exists.
 
 
 
